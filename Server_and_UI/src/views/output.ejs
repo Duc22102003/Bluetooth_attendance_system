@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kết quả từ CSDL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans dark:bg-gray-900 antialiased">
+    <div
+      class="relative w-6/12 mx-auto overflow-x-auto shadow-md sm:rounded-lg"
+    >
+      <h1 class="text-3xl m-3 font-bold text-red-600 dark:text-white">
+        Dữ liệu từ Cơ sở dữ liệu
+      </h1>
+      <table
+        class="w-full text-left rtl:text-right text-gray-700 dark:text-gray-200"
+      >
+        <thead
+          class="text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">Tên</th>
+            <th scope="col" class="px-6 py-3">Địa chỉ Addr_Bluetooth</th>
+            <th scope="col" class="px-6 py-3">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(item => { %>
+            <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 "
+          >
+           <td class="px-6 py-4"><%= item.Name %></td>
+            <td class="px-6 py-4"><%= item.Addr_Bluetooth %></td>
+            <td class="px-6 py-4"><%= item.Time %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

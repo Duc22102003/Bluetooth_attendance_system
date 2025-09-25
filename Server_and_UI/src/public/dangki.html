@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng ký thành viên mới</title>
+    <link rel="stylesheet" type="text/css" href="./dangki.css">
+</head>
+<body>
+    <form action="/danhsach" method="GET">
+        <input type="submit" value="Danhsach">
+    </form>
+    <div class="container">
+    <h2>Đăng ký thành viên mới</h2>
+    <form action="/register" method="POST">
+        <label for="name">Tên:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="MSSV">MSSV</label><br>
+        <input type="text" id="MSSV" name="MSSV" required><br>
+        <label for="mac_address">Địa chỉ Addr_Bluetooth:</label><br>
+        <input type="text" id="mac_address" name="mac_address" required><br>
+        <input type="submit" value="Đăng ký">
+    </form>
+    </div>
+</body>
+</html>

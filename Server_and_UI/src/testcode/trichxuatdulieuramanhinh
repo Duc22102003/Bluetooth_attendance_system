@@ -1,0 +1,17 @@
+const sqlite3 = require('sqlite3').verbose(); // khoi tao API
+
+let db = new sqlite3.Database('C:/sqlite/db/dulieudiemdanh.db'); // lien ket den flie du lieu
+
+
+let sql = `SELECT Ten FROM dulieu`; // tao mot truy van SQL
+db.all(sql,[],(err,rows)=> {
+  if(err) {
+    throw err;
+  }
+
+rows.forEach((row) => {  // lặp lại in ten ra ngoai man hinh
+  console.log(row.Ten);
+});
+});
+
+db.close();

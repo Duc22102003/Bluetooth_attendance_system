@@ -1,0 +1,22 @@
+const sqlite3 = require('sqlite3').verbose();
+
+// open the database
+let db = new sqlite3.Database('C:/sqlite/db/dulieudiemdanh.db');
+
+let sql = `SELECT Ten,MAac,STT
+           FROM dulieu WHERE Ten = ?` ;
+let Ten = "Duong Van Dung";
+
+// first row only
+db.get(sql, [Ten], (err, row) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  return row
+    ? console.log(row.Ten, row.MAac,row.STT)
+    : console.log(`No playlist found with the id ${Ten}`);
+
+});
+
+// close the database connection
+db.close();

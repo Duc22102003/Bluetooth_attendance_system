@@ -1,0 +1,35 @@
+.container {
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: 0 0 10px 0 black;
+    font-family: Arial, sans-serif;
+}
+.container h2 {
+    text-align: center;
+    color: #606060;
+}
+.container label {
+    color: #404040;
+    font-weight: bold;
+}
+.container input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eeeeee;
+}
+.container input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.container input[type=submit]:hover {
+    opacity: 0.8;
+}

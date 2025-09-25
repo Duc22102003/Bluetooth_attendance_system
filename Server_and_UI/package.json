@@ -1,0 +1,33 @@
+{
+  "name": "diemdanh",
+  "version": "1.0.0",
+  "description": "he thong diem danh cua lab 2S",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.jnpms"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "duong van dung",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.26.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.20.2",
+    "bootstrap": "5.1.3",
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "^4.19.2",
+    "mysql2": "2.3.3",
+    "node-cron": "^3.0.3",
+    "react-bootstrap": "2.2.2",
+    "sass": "1.49.10",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

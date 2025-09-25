@@ -1,0 +1,79 @@
+/* Đặt file này vào dangki.css */
+
+body {
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px;
+}
+
+.container h2 {
+    margin-bottom: 24px;
+    color: #334;
+    font-size: 24px;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    text-align: left;
+    font-weight: bold;
+}
+
+.container input[type=text], 
+.container input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background: #f0f0f0;
+}
+
+.container input[type=text]:focus, 
+.container input[type=password]:focus {
+    border-color: #4CAF50;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(76, 175, 80, 0.2);
+}
+
+.container input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.container input[type=submit]:hover {
+    background-color: #45a049;
+    opacity: 0.9;
+}
+
+.container input[type=submit]:active {
+    background-color: #3e8e41;
+    transform: translateY(2px);
+}

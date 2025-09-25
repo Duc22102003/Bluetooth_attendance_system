@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn thời gian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .time-picker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .time-picker select {
+            width: 80px;
+            height: 40px;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 5px;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            background-color: #f8f9fa;
+        }
+        .submit-button {
+            text-align: center;
+        }
+        .btn-primary {
+            width: 30%;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h4 class="text-center mb-4">Chọn mỗi h giờ hoặc mỗi m phút</h4>
+    <form id="timeForm" action="/reSchedule" method="POST">
+        <div class="time-picker">
+            <select id="hour" class="form-control" name="hour"></select>
+            <span>:</span>
+            <select id="minute" class="form-control" name="minute"></select>
+        </div>
+        <div class="submit-button">
+            <input type="submit" class="btn btn-primary mt-3" value="Gửi">
+        </div>
+    </form>
+</div>
+
+<script>
+    const hourSelect = document.getElementById('hour');
+    const minuteSelect = document.getElementById('minute');
+
+    const hourOptions = [1, 2, 3, 4, 6, 8, 12];
+    hourOptions.forEach(optionValue => {
+        let option = document.createElement('option');
+        option.value = optionValue;
+        option.text = optionValue.toString();
+        hourSelect.add(option);
+    });
+
+    const minuteOptions = [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30];
+    minuteOptions.forEach(optionValue => {
+        let option = document.createElement('option');
+        option.value = optionValue;
+        option.text = optionValue.toString();
+        minuteSelect.add(option);
+    });
+    minuteSelect.value = '5'
+
+    hourSelect.addEventListener('change', function() {
+        minuteSelect.value = '1';
+    });
+
+    minuteSelect.addEventListener('change', function() {
+        hourSelect.value = '1';
+    });
+</script>
+</body>
+</html>
